@@ -1,0 +1,160 @@
+﻿@model SearchViewModel
+@{
+    ViewBag.Title = "IoT Workshop >> Filtering the results";
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li><a href="@Url.Action("WebPart","Docs", new {area=""})">Web part</a></li>
+        <li class="active">Filtering</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>
+                Filtering the results<br />
+                <small>
+                    Use below form to filter data to limit the results
+                </small>
+            </h2>
+        </div>
+        <p>
+            You will learn, how to create forms to filter data based on filter options and provide additional action based
+            on the data with use of bootstrap. Since we have a lot of data, we will use paging to provide better user
+            experience.
+        </p>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById","Download",new {downloadId=12})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                    Download instructions
+                </a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById","Download",new {downloadId=3})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                    Download starter file
+                </a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById","Download",new {downloadId=6})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                    Download snippets
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        @using (Html.BeginForm("Filtering", "WebPart", FormMethod.Get, new { @class = "form-inline margin-bottom-10" }))
+        {
+            <div class="col-md-offset-3 col-md-6" id="search-box">
+                <label class="sr-only" for="DeviceQuery">Search devices by name</label>
+                @Html.TextBoxFor(d => d.Query, new { @class = "form-control width-250", id = "DeviceQuery", placeholder = "Enter search string" })<button type="submit" class="btn btn-info">
+                    Search
+                    &nbsp;
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+        }
+        @if (Model.Devices.Any())
+        {
+            <table class="table table-striped">
+                <tr>
+                    <th>SN</th>
+                    <th>Device</th>
+                    <th>Description</th>
+                    <th>Items Count</th>
+                    <th>
+                    </th>
+                </tr>
+                @foreach (var currentDevice in Model.Devices)
+                {
+                    <tr>
+                        <td>
+                            @currentDevice.SerialNumber
+                        </td>
+                        <td>
+                            @currentDevice.Name
+                        </td>
+                        <td>
+                            @currentDevice.Description
+                        </td>
+                        <td>
+                            @currentDevice.Items.Count
+                        </td>
+                        <td>
+                            <div class="btn-group pull-right">
+                                <button type="button"
+                                        class="btn btn-default dropdown-toggle"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                    Action <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Chart</a></li>
+                                    <li><a href="@Url.Action("DoPushNotification", new {deviceId = currentDevice.DeviceId})">Push notification</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                @*<tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            @using (Html.BeginForm("ExportToExcell", "WebPart", FormMethod.Get))
+                            {
+                                <button class="btn btn-info pull-right">Export to Excell</button>
+                            }
+                        </td>
+                    </tr>*@
+            </table>
+            using (Html.BeginForm("ExportToExcell", "WebPart", FormMethod.Get))
+            {
+                <button class="btn btn-info pull-right">Export to Excell</button>
+            }
+
+
+            @Html.PagedListPager(Model.Devices, page => Url.Action("Filtering", "WebPart", new { page, @class = "pull-left" }),
+            PagedListRenderOptions.ClassicPlusFirstAndLast)
+        }
+        else
+        {
+            <p class="text-info">There is no data present. Please, check the query or add some data in administration.</p>
+        }
+    </div>
+    @*<div class="col-md-3">
+            <div class="list-group">
+                <a href="#"
+                   class="list-group-item active">
+                    <h4 class="list-group-item-heading">Actions</h4>
+                    <p class="list-group-item-text">
+                        Click on below link to perfom certain actions
+                    </p>
+                </a>
+                <div class="list-group-item download-image">
+                    <h4 class="list-group-item-heading">Export options</h4>
+                    <p class="list-group-item-text margin-bottom-10">
+                        click on the button to export current data to Microsoft Excell
+                    </p>
+                    @using (Html.BeginForm("ExportToExcell", "WebPart", FormMethod.Get))
+                    {
+                        <button class="btn btn-info">Excell</button>
+                    }
+                </div>
+            </div>
+        </div>*@
+</div>

@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "IOT workshop >> Web part >> Download section";
+}
+
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index", "Docs", new {area = ""})">Docs</a></li>
+        <li><a href="@Url.Action("WebPart","Docs", new {area=""})">Web part</a></li>
+        <li class="active">Creating download provider</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>
+                Building a download provider<br />
+                <small>
+                    you will learn, how to build a download provider for downloading files
+                </small>
+            </h2>
+        </div>
+        <p>
+            A lot of information are saved and prepared to be in some kind of form. Either in <b>P</b>ortable <b>D</b>ocument <b>F</b>ormat or
+            very known <a href="http://office.com" target="_BLANK">Office formats</a>, which are then delivered to the user. In this part you will learn,
+            how to write your own provider for working with <a href="http://azure.microsoft.com" target="_BLANK">Microsoft Azure</a>.
+        </p>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById", "Download", new {downloadId = 13})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                    Download instructions
+                </a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById", "Download", new {downloadId = 8})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                    Download starter file
+                </a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById", "Download", new {downloadId = 15})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                    Download snippets
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <p class="align-center">
+            If you wanna check the final solution, click on the link below.
+        </p>
+        <p class="get-content">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 14})" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download final solution
+            </a>
+        </p>
+    </div>
+</div>
+

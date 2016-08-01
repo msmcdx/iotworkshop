@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "IoT Workshop >> Push Notifications";
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li><a href="@Url.Action("WebPart","Docs", new {area=""})">Web part</a></li>
+        <li class="active">Push Notifications</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Sending push notifications<br />
+            <small>
+                you have an option to push notifications to the selected device
+            </small>
+        </h2>
+    </div>
+    <p>
+        You will learn, how to send push notifications with use of Microsoft Azure Push Notification ability.
+        It enables you to target push notifications and to send different data to the user.
+        The Windows Push Notification Services (WNS) enables third-party developers to send toast,
+        tile, badge, and raw updates from their own cloud service. This provides
+        a mechanism to deliver new updates to your users in a power-efficient and dependable way.
+    </p>
+    <div class="margin-bottom-10 text-center">
+        <img src="https://i-msdn.sec.s-msft.com/dynimg/IC618819.png" alt="Windows Notification overview"/><br/>
+        <small>Picture is taken from <a href="https://msdn.microsoft.com/en-us/library/windows/apps/mt187203.aspx" target="_BLANK">MSDN site</a></small>
+    </div>
+    <div class="col-md-12 text-center">
+        <a href="@Url.Action("Filtering")" class="btn btn-info btn-lg">Start with selecting a device</a>
+    </div>
+</div>

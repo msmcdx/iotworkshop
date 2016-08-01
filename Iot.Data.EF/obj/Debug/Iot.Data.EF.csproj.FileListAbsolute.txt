@@ -1,0 +1,16 @@
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\Iot.Data.EF.dll.config
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\Iot.Data.EF.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\Iot.Data.EF.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\EntityFramework.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\Iot.Interfaces.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\Iot.Models.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\Iot.Interfaces.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\Iot.Models.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\EntityFramework.xml
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\obj\Debug\Iot.Data.EF.csprojResolveAssemblyReference.cache
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\obj\Debug\Iot.Data.EF.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\obj\Debug\Iot.Data.EF.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\obj\Debug\Iot.Data.EF.Migrations.AddFileNameFriendlyUrlToDownload.resources
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.EF\obj\Debug\Iot.Data.EF.csproj.GenerateResource.Cache

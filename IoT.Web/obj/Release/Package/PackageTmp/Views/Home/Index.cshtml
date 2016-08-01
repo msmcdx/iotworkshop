@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "IoT Workshop >> Homepage";
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h1>
+            IoT Worskhop<br/>
+            <small>
+                Explanation and guidance
+            </small>
+        </h1>
+        <div class="row">
+            <div class="col-md-12" id="rss">
+                <a href="@Url.Action("DevicesRss")" target="_BLANK" class="text-uppercase">
+                    Devices @Html.Image("devicesRss", "/Images/rss.svg", "RSS of devices")
+                </a>
+                &nbsp;
+                <a href="@Url.Action("ItemsRss")" target="_BLANK" class="text-uppercase">
+                    Items @Html.Image("devicesRss", "/Images/rss.svg", "RSS of items")
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                    This projects is work in progress. It consists out of 3 projects, driven for attendees to get the most out
+                    of the topics, that interest them. Whole solution is build with separation of concerns in mind. In praxis, that
+                    means, that you can either build just one of all of the components for getting the data and working with them.
+                    Every step is documented and build as an instruction for you to understand the <b>problem</b>
+                    and why we decide <b>the solution</b>.<br /><br />
+                    The solution consists of:
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <div class="home-tile row-height">
+                <div class="col-md-5 home-thumb col-height">
+                    <img src="@Url.Content("~/Images/home_data.svg")" class="home-thumb-img"/>
+                </div>
+
+                <div class="col-md-7 col-height">
+                    <h2>Data</h2>
+                    <p>
+                        Project, where we write code to work with different data sources -
+                        default example is made for working with Entity Framework. It also uses a project <b>Models</b>,
+                        where all models for the solution is kept (for sharing purposes)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-md-6">
+                <div class="home-tile row-height">
+                    <div class="col-md-5 home-thumb col-height">
+                        <img src="@Url.Content("~/Images/home_infrastructure.svg")" class="home-thumb-img"/>
+                    </div>
+
+                    <div class="col-md-7 col-height">
+                        <h2>Infrastructure</h2>
+                        <p>
+                            Common libraries and interfaces for us to be able to dynamicly change
+                            all the implementation based on our need.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="home-tile row-height">
+                    <div class="col-md-5 home-thumb col-height">
+                        <img src="@Url.Content("~/Images/home_extensibility.svg")" class="home-thumb-img"/>
+                    </div>
+
+                    <div class="col-md-7 col-height">
+                        <h2>Extensibility</h2>
+                        <p>Project, where we can add our own providers for different implementation: f.e. sending emails, loggin data, etc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="home-tile row-height">
+                        <div class="col-md-5 home-thumb col-height">
+                            <img src="@Url.Content("~/Images/home_lib.svg")" class="home-thumb-img" />
+                        </div>
+
+                        <div class="col-md-7 col-height">
+                            <h2>Lib</h2>
+                            <p>Low level code for us to be able to work with sending data from a device (Raspberry PI 2 in our case)</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="home-tile row-height">
+                    <div class="col-md-5 col-height">
+                        <img src="@Url.Content("~/Images/home_ui.svg")" class="home-thumb-img"/>
+                    </div>
+
+                    <div class="col-md-7 col-height">
+                        <h2>User Interface</h2>
+                        <p>User interface for Desktop part, for IoT part and for web part.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="col-md-6">
+            <a href="@Url.Action("Index", "Docs")" id="home-last">
+                <div class="home-tile home-tile-last row-height">
+                    <div class="col-md-5 col-height">
+                        <img src="@Url.Content("~/Images/home_start.svg")" class="home-thumb-img"/>
+                    </div>
+
+                    <div class="col-md-7 col-height">
+                        <h1>Start Here</h1>
+                        <h2>Happy Coding!</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

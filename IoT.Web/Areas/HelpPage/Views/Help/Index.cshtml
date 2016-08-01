@@ -1,0 +1,29 @@
+@model Collection<ApiDescription>
+
+@{
+    ViewBag.Title = "ASP.NET Web API Help Page";
+
+    // Group APIs by controller
+    ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);
+}
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            API help page documentation<br/>
+            <small>
+                click on below Web API to get more information about output, calls, etc.
+            </small>
+        </h2>
+    </div>
+    <p>
+        Currently we have below services for getting information for the IOT workshop. For more information, how to build
+        ASP.NET Web API click on <a href="http://www.asp.net/api" target="_BLANK">this link</a> to get more information.
+        <br /><br />
+        Alternatively, you also have a great videos on <a href="http://mva.ms" target="_BLANK">Microsoft Virtual Academy</a>.
+    </p>
+    @foreach (var group in apiGroups)
+    {
+        @Html.DisplayFor(m => group, "ApiGroup")
+    }
+
+</div>

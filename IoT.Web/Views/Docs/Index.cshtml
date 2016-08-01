@@ -1,0 +1,108 @@
+﻿@{
+    ViewBag.Title = "IoT Workshop >> Dokumentacija";
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Project Documentation<br/>
+            <small>
+                Choose your path and begin an awesome journey
+            </small>
+        </h2>
+
+    </div>
+    @* Nepotrebno so gumbi dovolj jasni in že v h2 small piše, da zberi kar želiš + grdo je :P *@
+    @*<p>
+        Click on the header to begin with the workshop. You can either start from left to right or just choose the journey, you
+        want to take, explore and learn.
+    </p>*@
+
+    <div class="row row-eq-height"
+         id="parts">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    IoT
+                    <!-- part of the workshop
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>-->
+                </div>
+                <div class="panel-body">
+                    <img src="@Url.Content("~/Images/docs_iot.svg")"
+                         class="center-block docs-thumb-img"/>
+                    <p>
+                        You will play with building a sender app to the cloud via 2 options. First will be via
+                        <a href="http://www.azure.com"
+                           target="_BLANK">Azure Event Hubs</a> and via classic HTTP post to
+                        the service, running in the cloud. You will build 3 types of application:
+                    </p>
+                    <ul>
+                        <li>
+                            Application which will be working with sensors
+                        </li>
+                        <li>
+                            Application, which will be as a fascilitator and provider of data to the cloud
+                            with use of current cloud options
+                        </li>
+                        <li>
+                            Application, which will be as a fascilitator, but will not use cloud features
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <a class="panel-go"
+                       href="@Url.Action("Iot", "Docs")">Follow the path of <strong>IoT</strong><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Web
+                    <!-- part of the workshop
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>-->
+                </div>
+                <div class="panel-body">
+                    <img src="@Url.Content("~/Images/docs_web.svg")"
+                         class="center-block docs-thumb-img"/>
+                    <p class="margin-bottom-10">
+                        You will build different parts of the web application, which will enable you
+                        to show graph, create realtime data retrieval, search through data and enable the
+                        export to Word and PDF, send notifications to connected devices and send data to
+                        other services, namely PowerBI, Hadoop (Machine Learning) or register your app
+                        to be a provider of data in the cloud.
+                    </p>
+                    @*@Html.ActionLink("Access to Web APIs", "Index", "Help", new {area = ""}, new {@class = "btn btn-info"})*@
+                </div>
+                <div class="">
+                    <a class="panel-go"
+                       href="@Url.Action("WebPart", "Docs")">Follow the path of <strong>Web</strong><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Desktop
+                    <!-- part of the workshop
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>-->
+                </div>
+                <div class="panel-body">
+                    <img src="@Url.Content("~/Images/docs_desktop.svg")"
+                         class="center-block docs-thumb-img"/>
+                    <p>
+                        Data and services are avaliable through web. Your assigment will be to build client for getting data
+                        to the desktop and provide basic functionalities - <b>dynamic (from already provided data via webservices)</b> and <b>realtime chart (via Azure Event Hub functionalitiy)</b>.
+                        You will learn, how to build universal applications and how to create services and interact with system.
+                    </p>
+                </div>
+                <div class="">
+                    <a class="panel-go"
+                       href="@Url.Action("Desktop", "Docs")">Follow the path of <strong>Desktop</strong><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   style="font-size:12px;overflow:visible;color-interpolation-filters:sRGB;fill:none;fill-rule:evenodd;stroke-linecap:square;stroke-miterlimit:3"
+   version="1.1"
+   id="svg2"
+   class="st2"
+   xml:space="preserve"
+   viewBox="0 0 328.94992 288.12662"
+   height="4.0017562in"
+   width="4.5687475in"><metadata
+     id="metadata27"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs25" /><v:documentProperties
+     v:viewMarkup="false"
+     v:metric="true"
+     v:langID="1060" /><style
+     id="style4"
+     type="text/css"><![CDATA[
+		.st1 {fill:#d9230f;stroke:none;stroke-linecap:butt;stroke-width:0.75}
+		.st2 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]></style><g
+     transform="translate(-213.71912,-9.5814)"
+     id="g6"
+     v:groupContext="foregroundPage"
+     v:index="1"
+     v:mID="0"><title
+       id="title8">Page-1</title><v:pageProperties
+       v:shadowOffsetY="-8.50394"
+       v:shadowOffsetX="8.50394"
+       v:drawingUnits="24"
+       v:pageScale="0.0393701"
+       v:drawingScale="0.0393701" /><g
+       v:groupContext="group"
+       v:mID="9"
+       transform="translate(213.719,-401.292)"
+       id="group9-1"><title
+         id="title11">Unidentified feature object</title><g
+         transform="translate(0,-54.2866)"
+         v:groupContext="shape"
+         v:mID="10"
+         id="shape10-2"><title
+           id="title14">Sheet.10</title><path
+           style="fill:#d9230f;stroke:none;stroke-width:0.75;stroke-linecap:butt"
+           id="path16"
+           class="st1"
+           d="m 263.55,647.04 0,-86.04 c 0,-51.93 -45.41,-95.84 -99.11,-95.84 -53.71,0 -99.11,43.91 -99.11,95.84 l 0,86.04 C 13.12,667.89 0,698.44 0,698.44 l 0.65,0.56 327.55,0 0.75,-0.56 c -0.02,0 -13.13,-30.55 -65.4,-51.4 z m -186.49,-4.54 0,-81.5 c 0,-45.59 40.01,-84.1 87.37,-84.1 47.36,0 87.36,38.51 87.36,84.1 l 0,81.5 -0.83,0 c -1.5,-0.49 -2.9,-1.02 -4.45,-1.5 l -58.39,0 c 13.73,-5.7 32.72,-17.44 38.53,-40.1 0.37,-1.58 -0.19,-3.26 -1.58,-3.91 -1.31,-0.85 -3.09,-0.75 -4.29,0.46 -0.19,0.19 -22.1,21.17 -40,21.35 -0.19,-0.02 -0.33,0.12 -0.51,0.13 7.29,-12.24 15.46,-24.5 24.63,-42.2 18.37,-35.34 -6.9,-71.98 -41.39,-72.82 -34.51,-0.65 -61.45,34.69 -44.66,70.96 8.55,18.43 16.28,31.13 23.09,43.87 -17.89,-0.58 -39.37,-21.09 -39.65,-21.28 -1.03,-1.21 -2.8,-1.31 -4.2,-0.46 -1.41,0.65 -2.05,2.33 -1.68,3.91 5.92,22.66 24.93,34.4 38.66,40.1 l -52.77,0 c -1.56,0.47 -2.94,1 -4.44,1.49 l -0.8,0 0,0 z m 121.7,-72.86 c -0.1,2.8 -18.56,26.29 -35.62,25.92 -17.16,-0.46 -32.45,-23.12 -32.27,-25.92 0.1,-2.7 67.89,-2.7 67.89,0 z m -29.19,-16.22 c 0.19,-6.53 7.56,-16.13 11.19,-16.04 3.64,0 9.24,10.45 9.14,16.97 -0.19,6.35 -5.5,7.56 -9.14,7.56 -3.64,-0.19 -11.28,-2.06 -11.19,-8.49 z m -20.77,8.48 c -3.64,0 -8.95,-1.21 -9.14,-7.55 -0.1,-6.53 5.5,-16.98 9.14,-16.98 3.64,-0.09 10.99,9.51 11.18,16.04 0.1,6.44 -7.54,8.31 -11.18,8.49 z" /></g><g
+         transform="translate(16.7903,0)"
+         v:groupContext="shape"
+         v:mID="11"
+         id="shape11-4"><title
+           id="title19">Sheet.11</title><path
+           style="fill:#d9230f;stroke:none;stroke-width:0.75;stroke-linecap:butt"
+           id="path21"
+           class="st1"
+           d="m 147.69,699 c 91.01,0 141.54,-33.2 147.6,-44.94 L 0,654.06 C 6.07,665.8 56.6,699 147.69,699 Z" /></g></g></g></svg>

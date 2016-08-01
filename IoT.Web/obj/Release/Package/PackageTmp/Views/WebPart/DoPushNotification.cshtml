@@ -1,0 +1,39 @@
+﻿@model Device
+
+@{
+    var name = Model.Name;
+    ViewBag.Title = "IoT Workshop >> Do push notification for device " + name;
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li><a href="@Url.Action("WebPart","Docs", new {area=""})">Web part</a></li>
+        <li class="active">Push Notification for device @name</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Sending push notifications to <b>@name</b><br />
+            <small>
+                choose different option for notification
+            </small>
+        </h2>
+    </div>
+    <p class="text-info">
+        You will learn, how to modify messages and types of push notifications. We will use
+        classic <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh761462.aspx" target="_BLANK">POST</a> to send notification to Microsoft Notification Server
+        with a specific XML template to notify user. We will explore different option to be more descriptive
+        and to provide more information for the user based on his selected preferences.
+        <br/>
+        You can find the sample, how to send to all devices, <a href="https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-windows-store-dotnet-get-started/" target="_BLANK">here</a>
+        and how to send to specific device (from backend), <a href="https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-aspnet-backend-windows-dotnet-notify-users/" target="_BLANK">here</a>.
+    </p>
+    <p class="text-warning text-capitalize">
+        This section is still in construction. Avaliable in few weeks.
+    </p>
+</div>
+

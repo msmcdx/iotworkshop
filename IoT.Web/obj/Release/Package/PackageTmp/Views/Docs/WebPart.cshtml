@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "IoT Workshop >> Web part";
+}
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li class="active">Web part</li>
+    </ol>
+}
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            This is a web part of the workshop<br />
+            <small>
+                Use below navigation modules to navigate to different part of the workshop
+            </small>
+        </h2>
+    </div>
+    <p class="margin-bottom-10">
+        Workshop is built, using <a href="http://www.asp.net/mvc">ASP.NET MVC</a> technology with separation of concerns in mind.
+        It enables you to quickly change your source dynamicly and opt-in with your default provider for working with different parts of the
+        application f.e. with email. You write your own provider for sending email and then use the provider with simply changing the
+        provider settings in web configuration file. As mentioned, it uses separation of concern with use of IoC container:
+        in our case <a href="https://msdn.microsoft.com/en-us/library/ff647202.aspx" target="_BLANK">Unity</a> container to provide implementation
+        for requested service in run time. Since we are working with different data sources (<a href="https://msdn.microsoft.com/en-us/data/ef.aspx" target="_BLANK">Entity Framework</a>
+        for connection to the <a href="http://azure.microsoft.com" target="_BLANK">Microsoft Azure SQL</a> database, connection to
+        <a href="http://azure.microsoft.com" target="_BLANK">Microsoft Azure Storage</a> etc., we use developer pattern,
+        written by <a href="http://martinfowler.com/eaaCatalog/unitOfWork.html" target="_BLANK">Martin Fowler</a>, which is really effective in our case.
+        For example, Entity framework as such is an implementation of <a href="http://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application" target="_BLANK">Unit of Work</a> pattern. If we would use <b>just</b> EF, then we won't implement upper patterns, since
+        that would be overkill or in IT term, over-engeenering.
+        <br/>
+        In order to follow along, we recommend checking <a href="http://mva.ms" target="_BLANK">resources section</a> in <a href="@Url.Action("About", "Home", new {area = ""})">About the project</a> part of the webpage.
+    </p>
+    <p class="margin-bottom-10">
+        Check <a href="@Url.Action("Index", "Help", new { area = "HelpPage" })" class="btn btn-default">Web APIs</a> for more details about Web API's.<br />
+    </p>
+    <p class="margin-bottom-10">
+        As part of the workshop we will be building different building block, based on the requirements:
+    </p>
+
+    <div class="row row-eq-height" id="web-parts">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Charts
+                </div>
+                <div class="panel-body">
+                    <img src="@Url.Content("~/Images/docs_charts.svg")" class="center-block" />
+                    <p class="margin-bottom-10">
+                        You will build chart for getting the data from the data you will receive by hitting <a href="@Url.Action("Index", "Help")></a>ASP.NET Web API
+                        endpoints. You will create chart with the use of <a href="http://mvc.syncfusion.com" target="_BLANK">web controls</a>, since they
+                        are avaliable for free for community. You will see, how you can leverage different chart to get information about current device statuses
+                        and progress.
+                    </p>
+                </div>
+                <div class="">
+                    <a class="panel-go" href="@Url.Action("Chart", "WebPart")">Charts <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Filtering the results
+                </div>
+                <div class="panel-body">
+                    <img src="@Url.Content("~/Images/docs_filter.svg")" class="center-block" />
+                    <p class="margin-bottom-10">
+                        You will learn, how to use <a href="http://martinfowler.com/eaaCatalog/unitOfWork.html" target="_BLANK">Unit of Work</a>
+                        pattern to get relevant data and how to provide information to the form. You will learn, how to build search forms, filter form,
+                        how to create your own helpers, how to use paging and all other goodies of <a href="http://www.asp.net/mvc" target="_BLANK">ASP.NET MVC</a>.
+                    </p>
+                </div>
+                <div class="">
+                    <a class="panel-go" href="@Url.Action("Filtering", "WebPart")">Filtering <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Push notifications
+                </div>
+                <div class="panel-body">
+                    <img src="@Url.Content("~/Images/docs_pushnotificatiosn.svg")" class="center-block" />
+                    <p class="margin-bottom-10">
+                        You will explore Push notification capabilities in <a href="http://www.azure.com" target="_BLANK">Microsoft Azure</a>.
+                        You will check, how to push significant information to the clients. Those client are <a href="http://www.windows.com" target="_BLANK">Windows 10</a>
+                        clients, which are connected to the push notifications. You will send broad and specific messages to different clients.
+                    </p>
+                </div>
+                <div class="">
+                    <a class="panel-go" href="@Url.Action("PushNotification", "WebPart")">Push notifications <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Downloads
+                </div>
+                <div class="panel-body">
+                    <img src="@Url.Content("~/Images/docs_download.svg")" class="center-block" />
+                    <p class="margin-bottom-10">
+                        A lot of information are saved and prepared to be in some kind of form. Either in <b>P</b>ortable <b>D</b>ocument <b>F</b>ormat or
+                        very known <a href="http://office.com" target="_BLANK">Office formats</a>, which are then delivered to the user. In this part you will learn,
+                        how to write your own provider for working with <a href="http://azure.microsoft.com" target="_BLANK">Microsoft Azure</a>.
+                    </p>
+                </div>
+                <div class="">
+                    <a class="panel-go" href="@Url.Action("DownloadInfo", "WebPart")">Downloads <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-warning">
+        All of the above samples are documented in their respective sections. You can also use download link in the section to get the offline version
+        of documents to your machine.
+    </p>
+</div>

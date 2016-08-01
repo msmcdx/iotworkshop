@@ -1,0 +1,14 @@
+@using IoT.Web.Areas.HelpPage.ModelDescriptions
+@model ModelDescription
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            @Model.Name<br /><small>@Model.Documentation</small>
+        </h2>
+    </div>
+    <p>
+        Below you will find information about current @Model.Name
+    </p>
+    @Html.DisplayFor(m => Model)
+</div>

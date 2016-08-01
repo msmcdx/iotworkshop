@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="iot, workshop, dx, slovenia,slo,vidmar,vrhovnik" name="description">
+    <link rel="shortcut icon" href="~/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", false)
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("IOT workshop", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse"
+                 id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Basic info", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Docs", "Index", "Docs", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("About the project", "About", "Home", new { area = "" }, null)</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <noscript>
+            <div class="noscriptholder">
+                <div class="alert alert-block alert-error fade in out">
+                    You must enable JavaScript to be able to use this site in full.
+                    <br />
+                    Za delovanje spletne strani potrebujete imeti omogočen Javascript.
+                </div>
+            </div>
+        </noscript>
+        <div class="row">
+            @if (TempData[ConstantHelper.PageMessageKey] != null)
+            {
+                <div class="alert alert-danger fade in alert-dismissable">
+                    <button class="close" aria-hidden="true" type="button" data-dismiss="alert">×</button>
+                    <strong>@TempData[ConstantHelper.PageMessageKey]</strong>
+                </div>
+            }
+            @if (IsSectionDefined("breadcrumb"))
+            {
+                <div class="pull-right height-30">
+                    @RenderSection("breadcrumb")
+                </div>
+            }
+            @RenderBody()
+        </div>
+        <hr />
+        <footer>
+            <p>@DateTime.Now.Year - IoT workshop &copy; - All data & pictures used for this site are publicly avaliable via Bing&trade; Search functionality</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+    var appInsights=window.appInsights||function(config){
+        function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+    }({
+        instrumentationKey:"b35e5575-b292-43ad-976c-2d0c821e114f"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+    </script>
+</body>
+</html>

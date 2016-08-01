@@ -1,0 +1,5 @@
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Models\bin\Debug\Iot.Models.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Models\bin\Debug\Iot.Models.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Models\obj\Debug\Iot.Models.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Models\obj\Debug\Iot.Models.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Models\obj\Debug\Iot.Models.csprojResolveAssemblyReference.cache

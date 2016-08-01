@@ -1,0 +1,129 @@
+﻿@model PagedList.IPagedList<Download>
+@{
+    ViewBag.Title = "IoT Workshop >> Download section";
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h1>
+            Download section<br/>
+            <small>
+                All neccessary files, solutions, scripts, etc.
+            </small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                Based on the filters on the left side, please choose a file to download. If you choose "Details",
+                you will get more information about the downloaded file.
+            </p>
+        </div>
+        <div class="col-md-12 text-center">
+            @using (Html.BeginForm("Filter", "Download", FormMethod.Post, new {enctype = "application/x-www-form-urlencoded"}))
+            {
+                <div class="well text-center filter-wrap">
+                    <div class="filter clearfix">
+                        @foreach (var category in (List<CategoryViewModel>) ViewBag.Categories)
+                        {
+                            var guid = Guid.NewGuid().ToString();
+                            <div>
+                                <input type="checkbox"
+                                       id="@guid"
+                                       name="download-@category.Category.CategoryId"
+                                       @if (category.Selected)
+                                       {
+                                           @: checked
+                                       }/>
+                                <label for="@guid"><span></span>@category.Category.Name</label>
+                            </div>
+                        }
+                        <div>
+                            <button type="submit" class="btn btn-default">Filter</button>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+        <div class="col-md-12">
+            @if (Model.Any())
+            {
+                <div class="row margin-bottom-10 grid-eq-height">
+                    @foreach (var download in Model)
+                    {
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        @download.Name
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>
+                                            @download.Description
+                                        </p>
+                                        <div class="clearfix margin-bottom-10"></div>
+                                        <div class="pull-right">
+                                            <a href="@Url.Action("Detail", new {friendlyName = download.FriendlyName})"
+                                               class="btn btn-default margin-bottom-10">
+                                                Details
+                                                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                                            </a>
+                                            <a href="@Url.Action("DownloadById", new {downloadId = download.DownloadId})" class="btn btn-default margin-bottom-10">
+                                                Download
+                                                <span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <div class="panel-footer">
+                                    <div class="pull-left">
+                                        @Html.Partial("_DownloadType", download.DownloadType)
+                                    </div>
+                                    <div class="pull-right">
+                                        @*@Html.Partial("_Categories", download.Categories)*@
+                                        Downloaded <span class="badge">@download.Count</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                @Html.PagedListPager(Model,
+                    page => Url.Action("Index", "Download", new {page, @class = "pull-left"}),
+                    PagedListRenderOptions.ClassicPlusFirstAndLast)
+            }
+            else
+            {
+                <p>
+                    No downloads avaliable!
+                </p>
+            }
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function adjustGrid() {
+        var selector = ".grid-eq-height > div";
+        // Reset all boxes to automatic height
+        $(selector).each(function () {
+            $(this).css("height", "");
+        });
+        
+        // When browser updates all of the "natural" heights...
+        window.requestAnimationFrame(function() {
+            var max = 0;
+            // ..find the heighest box...
+            $(selector).each(function () {
+                max = Math.max($(this).height(), max);
+            });
+            // .. and make all boxes of that (max) height
+            $(selector).each(function () {
+                $(this).css("height", max);
+            });
+        });
+    }
+
+    window.onload = window.onresize = function() {
+        adjustGrid();
+    }
+</script>

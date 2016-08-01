@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "IoT Workshop >> Chart showcase";
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li><a href="@Url.Action("WebPart","Docs", new {area=""})">Web part</a></li>
+        <li class="active">Charts</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Chart showcase of data<br />
+            <small>
+                Use below form to filter data and use realtime syncing, if that is
+                your requirement.
+            </small>
+        </h2>
+    </div>
+    <p>
+        You will build chart for getting the data from the data you will receive by hitting <a href="@Url.Action("Index", "Help")"></a>ASP.NET Web API
+        endpoints. You will create chart with the use of <a href="http://mvc.syncfusion.com" target="_BLANK">web controls</a>, since they
+        are avaliable for free for community. You will see, how you can leverage different chart to get information about current device statuses
+        and progress.
+    </p>
+</div>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <p class="get-content">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 27})" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download instructions
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="get-content">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId =3 })" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download starter file
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="get-content">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 29})" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download snippets
+            </a>
+        </p>
+    </div>
+</div>
+<div class="col-md-12">
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="ddlDevices">Choose device:</label>
+            @Html.DropDownList("ddlDevices", (IEnumerable<SelectListItem>)ViewBag.Devices, new { @class = "form-control" })
+        </div>
+    </form>
+</div>
+<div class="col-md-9">
+    @(Html.EJ()
+        .Chart("chartcontainer")
+        .PrimaryXAxis(xaxis => xaxis.ValueType(AxisValueType.Datetime).LabelFormat("MMM-yyyy")
+        .Title(tit => tit.Text("Collected Temperature"))
+         .IntervalType(ChartIntervalType.Years).LabelFormat("dd-MM-yyyy")
+         .Range(ra => ra.Min(new DateTime(2015, 7, 1)).Max(new DateTime(2016, 1, 1)).Interval(1)))
+         .PrimaryYAxis(yaxis => yaxis.RangePadding(ChartRangePadding.Additional)
+         .LabelFormat("${value}").Title(tit => tit.Text("Temperature (in Celsius)"))
+         .Range(ra => ra.Min(10).Max(100)
+         .Interval(10))
+         .StripLine(str =>
+          {
+              str.Start(30).End(40).Text("High Temperature").Visible(true).TextAlignment(StriplineTextAlignment.MiddleCenter)
+                 .Color("#0D97D4").Font(ft => ft.Size("18px").Color("White")).ZIndex(ChartZIndex.Behind).BorderWidth(0).Add();
+              str.Start(20).End(30).Text("Avg Temperature").Visible(true).TextAlignment(StriplineTextAlignment.MiddleCenter)
+                 .Color("#00AEFF").Font(ft => ft.Size("18px").Color("White")).ZIndex(ChartZIndex.Behind).BorderWidth(0).Add();
+              str.Start(10).End(20).Text("Low Temperature").Visible(true).TextAlignment(StriplineTextAlignment.MiddleCenter)
+                 .Color("#14B9FF").Font(ft => ft.Size("18px").Color("White")).ZIndex(ChartZIndex.Behind).BorderWidth(0).Add();
+          }))
+         .Series(ser =>
+         {
+             ser.Name("Germany").Type(SeriesType.Line)
+             .Border(st => st.Width(4)).Fill("white")
+             .Tooltip(tooltip => tooltip.Visible(true)
+                 .Format("#point.x# : #point.y# ")).Points(po =>
+              {
+                  po.X("Jan").Y(28).Add();
+                  po.X("Feb").Y(27).Add();
+                  po.X("Mar").Y(33).Add();
+                  po.X("Apr").Y(36).Add();
+                  po.X("May").Y(28).Add();
+                  po.X("Jun").Y(30).Add();
+                  po.X("Jul").Y(31).Add();
+                  po.X("Aug").Y(27).Add();
+                  po.X("Sep").Y(30).Add();
+                  po.X("Oct").Y(20).Add();
+                  po.X("Nov").Y(15).Add();
+                  po.X("Dec").Y(17).Add();
+              })
+              .Width(4)
+               .Tooltip(to => to.Visible(true).Fill("white").Border(b => b.Color("black").Width(1)).Font(f => f.Color("black")))
+               .Marker(mk => mk.Visible(true).Shape(ChartShape.Circle).Border(st => st.Width(4)).Fill("black")
+               .Size(si => si.Height(12).Width(12))).Add();
+         })
+         .CommonSeriesOptions(cr => cr.EnableAnimation(true))
+         .CanResize(true)
+         .Title(title => title.Text("Temperature comparision for selected device"))
+         .Size(sz => sz.Height("600"))
+         .Legend(lg => lg.Visible(false))
+         .EnableCanvasRendering(true))
+</div>
+<div class="col-md-3">
+    <div class="panel-info">
+        <div class="list-group">
+            <a href="#"
+               class="list-group-item active">
+                <h4 class="list-group-item-heading">Actions</h4>
+                <p class="list-group-item-text">
+                    Click on below link to perfom certain actions
+                </p>
+            </a>
+            <a id="download" download="Chart.png"
+               class="list-group-item download-image">
+                <h4 class="list-group-item-heading">Export graph</h4>
+                <p class="list-group-item-text">
+                    Click on below image to export.
+                </p>
+                <img src="~/Images/DataExport.png"
+                     id="imgExport"
+                     title="Export Chart" />
+            </a>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/syncfusion")
+    <script type="text/javascript" language="javascript">
+        $(function () {
+
+            $("#download").click(function () {
+                var svg = $("#chartcontainer").ejChart();
+                var dt = svg.toDataURL();
+                this.href = dt;
+            });
+
+            $("#ddlDevices").change(function () {
+                device_changed();
+            });
+
+            function device_changed() {
+                //return;
+                var id = $("#ddlDevices").find(":selected").attr("value");
+
+                $.get("/devices/" + id + "/byid", function (data) {
+                    var arr = [];
+                    var d = data.Device.Items;
+
+                    // Take every 50th element and case string to date and number.
+                    for (var i = 0; i < d.length; i += 50)
+                        arr.push({ x: new Date(d[i].TimeAdded), y: d[i].Value * 1 });
+
+                    // Sort by date because syncfusion doesn't not
+                    arr = arr.sort(function (a, b) { return a.x - b.x });
+
+                    // Assing data to chart
+                    $("#chartcontainer").ejChart({ series: [{ points: arr, type: "line" }] });
+                });
+            }
+
+            device_changed();
+        });
+    </script>
+}
+
+@section styles
+{
+    @Styles.Render("~/Content/syncfusion")
+}

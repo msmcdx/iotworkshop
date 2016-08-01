@@ -1,0 +1,12 @@
+﻿@model List<Category>
+
+@foreach (var cat in Model)
+{
+
+    <a href="#">
+        <span class="badge">
+            @cat.Name
+        </span>
+        &nbsp;
+    </a>
+}

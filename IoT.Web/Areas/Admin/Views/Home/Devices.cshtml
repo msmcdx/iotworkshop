@@ -1,0 +1,94 @@
+﻿@using PagedList.Mvc
+@model AdminDevicesViewModel
+
+@{
+    ViewBag.Title = "IotWorkshop >> Admin Devices";
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="active">Devices Overview</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Devices
+            <small>do search for a device and / or choose a device from list and choose admin tasks</small>
+        </h2>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.Query))
+    {
+        <p class="text-info">
+            Selected query: <b>@Model.Query</b>
+        </p>
+    }
+</div>
+<div class="col-md-12">
+    @using (Html.BeginForm("Devices", "Admin", FormMethod.Get, new { @class = "form-inline pull-right", role = "form" }))
+    {
+        <div class="form-group">
+            <input type="search" class="form-control" value="@Model.Query"
+                   id="Query" name="Query" placeholder="use search term" />
+            <button class="btn btn-info">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+    }
+    <div class="col-md-12">
+        <a href="@Url.Action("DeviceAdd")" class="btn btn-default btn-lg margin-bottom-10">Add new item</a>
+    </div>
+    <div class="col-md-12">
+        @if (Model.Devices.Any())
+        {
+            <table class="table table-striped">
+                <tr>
+                    <th>Serial number</th>
+                    <th>Name of the device</th>
+                    <th>Description</th>
+                    <th>...</th>
+                </tr>
+                @foreach (var currentDevice in Model.Devices)
+                {
+                    <tr>
+                        <td>
+                            @currentDevice.SerialNumber
+                        </td>
+                        <td>
+                            @currentDevice.Name
+                        </td>
+                        <td>
+                            @currentDevice.Description
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button"
+                                        class="btn btn-success dropdown-toggle"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                    Action <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("DeviceEdit", new {deviceId = currentDevice.DeviceId})">Edit</a></li>
+                                    <li><a href="@Url.Action("DeviceDelete", new {deviceId = currentDevice.DeviceId})">Delete</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="@Url.Action("Report", new {deviceId = currentDevice.DeviceId})">Report</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </table>
+            @Html.PagedListPager(Model.Devices,
+            page => Url.Action("Devices", "Admin", new { page, Model.Query }),
+            PagedListRenderOptions.ClassicPlusFirstAndLast)
+        }
+        else
+        {
+            <p class="text-info">There is no data present. Please, check the query or add some data </p>
+        }
+    </div>
+</div>

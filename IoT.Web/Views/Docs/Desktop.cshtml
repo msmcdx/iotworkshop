@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "IOT workshop >> Dekstop part";
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li class="active">Desktop part</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>
+                Building Windows 10 Universal App<br />
+                <small>
+                    you will learn, how to build UWP apps
+                </small>
+            </h2>
+        </div>
+        <p>
+            Data and services are avaliable through web. Your assigment will be to build client for getting data
+            to the desktop and provide basic functionalities - <b>dynamic (from already provided data via webservices)</b> and <b>realtime chart (via Azure Event Hub functionalitiy)</b>.
+            You will learn, how to build universal applications and how to create services and interact with system.
+        </p>
+        Check <a href="@Url.Action("Index", "Help", new { area = "HelpPage" })" class="btn btn-default">Web APIs</a> for more details about Web API's.<br />
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById", "Download", new {downloadId = 10})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")"/><br/>
+                    Download instructions
+                </a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById", "Download", new {downloadId = 8})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")"/><br/>
+                    Download starter file
+                </a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="get-content">
+                <a href="@Url.Action("DownloadById", "Download", new {downloadId = 7})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")"/><br/>
+                    Download snippets
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <p>
+            If you wanna check the final solution, click on the link below.
+        </p>
+        <p class="get-content pull-left">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 9})" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download final solution
+            </a>
+        </p>
+    </div>
+</div>

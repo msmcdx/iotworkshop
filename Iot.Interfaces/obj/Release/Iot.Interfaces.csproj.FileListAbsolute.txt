@@ -1,0 +1,7 @@
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Interfaces\bin\Release\Iot.Interfaces.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Interfaces\bin\Release\Iot.Interfaces.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Interfaces\bin\Release\Iot.Models.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Interfaces\bin\Release\Iot.Models.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Interfaces\obj\Release\Iot.Interfaces.csprojResolveAssemblyReference.cache
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Interfaces\obj\Release\Iot.Interfaces.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Interfaces\obj\Release\Iot.Interfaces.pdb

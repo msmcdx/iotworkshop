@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "IoT Workshop >> Chart showcase";
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li><a href="@Url.Action("WebPart","Docs", new {area=""})">Web part</a></li>
+        <li class="active">Charts</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Chart showcase of data<br />
+            <small>
+                Use below form to filter data and use realtime syncing, if that is
+                your requirement.
+            </small>
+        </h2>
+    </div>
+    <p>
+        You will build chart for getting the data from the data you will receive by hitting <a href="@Url.Action("Index", "Help")"></a>ASP.NET Web API
+        endpoints. You will create chart with the use of <a href="http://mvc.syncfusion.com" target="_BLANK">web controls</a>, since they
+        are avaliable for free for community. You will see, how you can leverage different chart to get information about current device statuses
+        and progress.
+    </p>
+</div>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <p class="get-content">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 27})" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download instructions
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="get-content">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId =3 })" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download starter file
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="get-content">
+            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 29})" target="_BLANK">
+                <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                Download snippets
+            </a>
+        </p>
+    </div>
+</div>
+<div class="col-md-12">
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="ddlDevices">Choose device:</label>
+            @Html.DropDownList("ddlDevices", (IEnumerable<SelectListItem>)ViewBag.Devices, new { @class = "form-control" })
+        </div>
+    </form>
+</div>
+<div class="col-md-9">
+   Use 3rd party libraries to showcase graphs.
+</div>
+<div class="col-md-3">
+    <div class="panel-info">
+        <div class="list-group">
+            <a href="#"
+               class="list-group-item active">
+                <h4 class="list-group-item-heading">Actions</h4>
+                <p class="list-group-item-text">
+                    Click on below link to perfom certain actions
+                </p>
+            </a>
+            <a id="download" download="Chart.png"
+               class="list-group-item download-image">
+                <h4 class="list-group-item-heading">Export graph</h4>
+                <p class="list-group-item-text">
+                    Click on below image to export.
+                </p>
+                <img src="~/Images/DataExport.png"
+                     id="imgExport"
+                     title="Export Chart" />
+            </a>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    
+}
+
+@section styles
+{
+   
+}

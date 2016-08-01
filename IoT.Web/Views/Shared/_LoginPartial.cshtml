@@ -1,0 +1,26 @@
+﻿@using System.Security.Claims
+@if (Request.IsAuthenticated)
+{
+    var user = User.Identity as ClaimsIdentity;
+
+    if (user != null)
+    {
+        <p class="navbar-text navbar-right">
+            Signed in as
+            @if (user.FindFirst("http://schemas.microsoft.com/identity/claims/displayname") != null)
+            {
+                var name = user.FindFirst("http://schemas.microsoft.com/identity/claims/displayname").Value;
+                <b>
+                    @name
+                </b>
+            }
+            else
+            {
+                <b>
+                    @user.Name
+                </b>
+            }
+            <a href="@Url.Action("SignOut", "Account", new { area = "" })" class="navbar-link">Log off</a>
+        </p>
+    }
+}

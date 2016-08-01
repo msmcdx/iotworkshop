@@ -1,0 +1,52 @@
+﻿@model Download
+
+@{
+    var name = Model.Name;
+    ViewBag.Title = "IOT Workshop >> Download details " + name;
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Download", new {area=""})">Downloads</a></li>
+        <li class="active">Download @name</li>
+    </ol>
+}
+<div class="col-md-12">
+    <div class="page-header">
+        <h1>
+            Download for @name<br />
+            <small>
+                Press Download button to start with the download
+            </small>
+        </h1>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <p>
+                The following download item is in categories
+            </p>
+            <div class="well text-center filter-wrap">
+                <div class="filter clearfix">
+                    @foreach (var category in Model.Categories)
+                    {
+                        <span class="badge margin-right-10">
+                            @category.Name
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <p>
+                @Model.Description
+            </p>
+            <p class="get-content pull-left">
+                <a href="@Url.Action("DownloadById",new {downloadId=Model.DownloadId})" target="_BLANK">
+                    <img class="icon" src="@Url.Content("~/Images/download.svg")" /><br />
+                    Download @name
+                </a>
+            </p>
+        </div>
+    </div>
+</div>

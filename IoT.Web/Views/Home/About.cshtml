@@ -1,0 +1,141 @@
+﻿@model AboutViewModel
+@{
+    ViewBag.Title = "IoT Workshop >> About the workshop and authors";
+}
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            About the project<br/>
+            <small>
+                This is a joint project between 2 authors to showcase, what IoT is all about and what we as a Microsoft
+                devs can use in our endeveour to consume and work with large data.
+            </small>
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p class="text">
+                Please, use below form to send us your feedback or visit us at links in the right sidebar.
+            </p>
+
+            @using (Html.BeginForm("About", "Home", FormMethod.Post, new {@class = "form-group"}))
+            {
+                <div class="form-group">
+                    <label for="FullName">Fullname</label>
+                    <input type="text" class="form-control" id="FullName"
+                           name="FullName"
+                           value="@Model.FullName"
+                           placeholder="Enter your fullname"/>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" id="Email"
+                           value="@Model.Email"
+                           name="Email" placeholder="Enter your email"
+                           required/>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea class="form-control"
+                              id="content"
+                              rows="3"
+                              name="Content"
+                              placeholder="Enter your question / comment"
+                              required>@Model.Content</textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            }
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#"
+                   class="list-group-item active">
+                    <h4 class="list-group-item-heading">Resources</h4>
+                    <p class="list-group-item-text">
+                        click on below link to find out more about technology
+                    </p>
+                </a>
+                <a href="http://asp.net"
+                   class="list-group-item" target="_BLANK">
+                    <h4 class="list-group-item-heading">Microsoft ASP.NET</h4>
+                    <p class="list-group-item-text">
+                        everything about building dynamic webpages with .NET
+                    </p>
+                </a>
+                <a href="http://azure.com"
+                   class="list-group-item" target="_BLANK">
+                    <h4 class="list-group-item-heading">Microsoft Azure</h4>
+                    <p class="list-group-item-text">
+                        everything about Microsoft Cloud
+                    </p>
+                </a>
+                <a href="http://mva.ms"
+                   class="list-group-item" target="_BLANK">
+                    <h4 class="list-group-item-heading">Microsoft Virtual Academy</h4>
+                    <p class="list-group-item-text">
+                        free video on demand trainings
+                    </p>
+                </a>
+                <a href="http://dev.windows.com"
+                   class="list-group-item" target="_BLANK">
+                    <h4 class="list-group-item-heading">UAP</h4>
+                    <p class="list-group-item-text">
+                        resources for Universal Application Platform
+                    </p>
+                </a>
+            </div>
+            <div class="list-group">
+                <a href="#"
+                   class="list-group-item active">
+                    <h4 class="list-group-item-heading">Useful links</h4>
+                    <p class="list-group-item-text">
+                        click on below link to find out more
+                    </p>
+                </a>
+                <a href="http://www.microsoft.com/slovenija/strokovnjaki"
+                   class="list-group-item" target="_BLANK">
+                    <h4 class="list-group-item-heading">DX Slovenija</h4>
+                    <p class="list-group-item-text">
+                        Homepage of workshop creators
+                    </p>
+                </a>
+                <a href="http://www.cancel.si" class="list-group-item"
+                   target="_BLANK">
+                    <h4 class="list-group-item-heading">
+                        Cancel community
+                    </h4>
+                    <p class="list-group-item-text">
+                        Cancel community is an Umbrella corporation
+                    </p>
+                </a>
+                <a href="http://www.twitter.com" class="list-group-item"
+                   target="_BLANK">
+                    <h4 class="list-group-item-heading">
+                        MsTech twitter
+                    </h4>
+                    <p class="list-group-item-text">
+                        Twitter account of MStech.si
+                    </p>
+                </a>
+                <a href="http://www.vidmar.net" class="list-group-item"
+                   target="_BLANK">
+                    <h4 class="list-group-item-heading">
+                        Vidmar realm
+                    </h4>
+                    <p class="list-group-item-text">
+                        Vidmar homepage
+                    </p>
+                </a>
+                <a href="http://www.vrhovnik.net/weblog" class="list-group-item"
+                   target="_BLANK">
+                    <h4 class="list-group-item-heading">
+                        Bojan's blog
+                    </h4>
+                    <p class="list-group-item-text">
+                        blog about developer related stuff
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

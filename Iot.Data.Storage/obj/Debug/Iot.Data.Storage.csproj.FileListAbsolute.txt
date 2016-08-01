@@ -1,0 +1,9 @@
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\bin\Debug\Iot.Data.Storage.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\bin\Debug\Iot.Data.Storage.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\bin\Debug\Iot.Interfaces.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\bin\Debug\Iot.Models.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\bin\Debug\Iot.Interfaces.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\bin\Debug\Iot.Models.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\obj\Debug\Iot.Data.Storage.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\obj\Debug\Iot.Data.Storage.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Data.Storage\obj\Debug\Iot.Data.Storage.csprojResolveAssemblyReference.cache

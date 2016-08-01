@@ -1,0 +1,14 @@
+﻿@model DownloadType
+
+@switch (Model)
+{
+    case DownloadType.PDF:
+        <img src="~/Images/pdf.svg" alt="PDF file" class="thumb-24" />
+        break;
+    case DownloadType.DOC:
+        <img src="~/Images/doc.png" alt="doc file" class="thumb-24" />
+        break;
+    default:
+        <img src="~/Images/zip.svg" alt="ZIP file" class="thumb-24" />
+        break;
+}

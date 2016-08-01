@@ -1,0 +1,9 @@
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\bin\Debug\Iot.Engine.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\bin\Debug\Iot.Engine.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\bin\Debug\Iot.Interfaces.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\bin\Debug\Iot.Models.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\bin\Debug\Iot.Interfaces.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\bin\Debug\Iot.Models.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\obj\Debug\Iot.Engine.csprojResolveAssemblyReference.cache
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\obj\Debug\Iot.Engine.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Engine\obj\Debug\Iot.Engine.pdb

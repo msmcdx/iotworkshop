@@ -1,0 +1,10 @@
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\bin\Debug\Iot.Common.dll.config
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\bin\Debug\Iot.Common.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\bin\Debug\Iot.Common.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\bin\Debug\EntityFramework.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\bin\Debug\EntityFramework.xml
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\obj\Debug\Iot.Common.dll
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\obj\Debug\Iot.Common.pdb
+C:\Work\TFS\DxSlo\IoT\IotWorkshopSLN\Iot.Common\obj\Debug\Iot.Common.csprojResolveAssemblyReference.cache

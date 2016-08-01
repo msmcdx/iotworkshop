@@ -1,0 +1,19 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            An error has occured
+            <small>Please check the message and contact us in the <a href="@Url.Action(" About", "Home" )">about section.</a></small>
+        </h2>
+    </div>
+    <p class="text-danger">
+        @Model.Exception.Message
+    </p>
+</div>
+
+

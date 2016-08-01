@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "IOT workshop >> IOT part";
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home", new {area=""})">Home</a></li>
+        <li><a href="@Url.Action("Index","Docs", new {area=""})">Docs</a></li>
+        <li class="active">IOT part</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>
+                Building IOT solution<br />
+                <small>
+                    you will learn, how to build UWP apps for Raspeberry PI,
+                    how to get / push data to the cloud and how to deploy to small devices
+                </small>
+            </h2>
+        </div>
+        <p>
+            You will play with building a sender app to the cloud via 2 options. First will be via
+            <a href="http://www.azure.com" target="_BLANK">Azure Event Hubs</a> and via classic HTTP post to
+            the service, running in the cloud. You will build 3 types of application:
+        </p>
+        <ul>
+            <li>
+                Application which will be working with sensors
+            </li>
+            <li>
+                Application, which will be as a fascilitator and provider of data to the cloud
+                with use of current cloud options
+            </li>
+            <li>
+                Application, which will be as a fascilitator, but will not use cloud features
+            </li>
+        </ul>
+        <hr/>
+    </div>
+    <div class="col-md-12">
+        <div class="row row-eq-height" id="web-parts">
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Arduino
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            You’ll work with Arduino board and collection of sensor to implement simple automated device that read data about the world and act on it. This might be temperature alert (temperature sensor, LED), could be water planting device (moisture sensor, relay) or something completely new! Use your imagination, play around. This is the point of this board – quick innovation and implementing ideas.
+                            You'll need:
+                        </p>
+                        <ul>
+                            <li>
+                                latest version of Arduino software from <a href="https://www.arduino.cc/en/Main/Software">Arduino.cc</a>
+                            </li>
+                            <li>
+                                Arduino board, in our case <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno">Arduino Uno</a>
+                            </li>
+                            <li>
+                                Pack of sensors, for example <a href="http://www.dfrobot.com/index.php?route=product/product&path=35_49&product_id=345">DFRobot Beginner Kit for Arduino</a>
+                            </li>
+                        </ul>
+                        <p class="margin-bottom-10">
+                            Be sure to check out <a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples">official examples</a> and
+                            <a href="https://www.dfrobot.com/wiki/index.php?title=Category:Product_Manual">documentation provided for your sensors</a>!
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 24})" target="_BLANK">
+                                Download instructions
+                            </a>
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 22})" target="_BLANK">
+                                Download Starter Solution
+                            </a>
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 17})" target="_BLANK">
+                                Download Snippets
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Windows 10 UAP on Raspberry Pi
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            You’ll build a Windows 10 client application and deploy it to Raspberry Pi device. This app can use internet resources to configure itself, collect data from internet, or send data for internet.
+                            <br />
+                            Some ideas:
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Video player</b> – log to Azure, download and cache images and video from Blob storage, play downloaded files. Auto-update every X hours and on every start.
+                            </li>
+                            <li>
+                                <b>Info Board</b> – collect weather info, road info, calendar data and other resource of your team, family or company and display and refresh on old monitor, TV or big screen in conference room.
+                            </li>
+                            <li>
+                                <b>Your greatest app</b> – try to migrate your existing Windows 10 app to Raspberry Pi. See what works, what doesn’t and what are limitations.
+                            </li>
+                        </ul>
+                        <p class="margin-bottom-10">
+                            Connect simple sensor and actuators to RPi in order to interact with application. Button, LED, relay, motor or similar digital sensor would fit easily in your app.
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 23})" target="_BLANK">
+                                Download instructions
+                            </a>
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 20})" target="_BLANK">
+                                Download Starter Solution
+                            </a>
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 19})" target="_BLANK">
+                                Download Snippets
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Windows 10 talking to Arduino
+                    </div>
+                    <div class="panel-body">
+                        <p class="margin-bottom-10">
+                            Connect sensors to Arduino, then connect Arduino to Raspberry Pi 2 board. Create Windows 10 application that runs on PC or Arduino and uses remote-wiring libraries to read and write to Arduino pins and interact with different sensor and actuators.
+                            <br />
+                            Some ideas:
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Watering Device</b> – Use Raspberry Pi to water your plants. Integrate with calendar, customizable schedule, collected data about temperature and humidity and finally integrate with weather forecast.
+                            </li>
+                            <li>
+                                <b>Remote Controlled Home</b> – use IR remote control to communicate with Raspberry, use display devices like LCD boards to display data and control windows, lights, air conditioning and more.
+                            </li>
+                        </ul>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 25})" target="_BLANK">
+                                Download instructions
+                            </a>
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 21})" target="_BLANK">
+                                Download Starter Solution
+                            </a>
+                        </p>
+                        <p class="mycontent">
+                            <a href="@Url.Action("DownloadById", "Download", new {downloadId = 18})" target="_BLANK">
+                                Download Snippets
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,23 @@
+﻿@model ReportDeviceViewModel
+
+@{
+    var deviceName = Model.Device.Name;
+    ViewBag.Title = "IotWorkshop >> Report for " + deviceName;
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li><a href="@Url.Action("Devices","Home")">Devices</a></li>
+        <li class="active">Report for @deviceName</li>
+    </ol>
+}
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Report for device @deviceName
+            <small>use below form to adapt report to your needs</small>
+        </h2>
+    </div>
+</div>

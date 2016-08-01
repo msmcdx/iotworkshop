@@ -1,0 +1,1501 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IoT.Web</name>
+    </assembly>
+    <members>
+        <member name="T:IoT.Web.BundleConfig">
+            <summary>
+            Class BundleConfig.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Registers the bundles.
+            </summary>
+            <param name="bundles">The bundles.</param>
+        </member>
+        <member name="T:IoT.Web.RouteConfig">
+            <summary>
+            Class RouteConfig.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Registers the routes.
+            </summary>
+            <param name="routes">The routes.</param>
+        </member>
+        <member name="T:IoT.Web.Startup">
+            <summary>
+            Class Startup.
+            </summary>
+            <summary>
+            Class Startup.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Startup.ConfigureAuth(Owin.IAppBuilder)">
+            <summary>
+            Configures the authentication.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="M:IoT.Web.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configurations the specified application.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="T:IoT.Web.UnityConfig">
+            <summary>
+            Class UnityConfig.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.UnityConfig.RegisterComponents">
+            <summary>
+            Registers the components.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.WebApiConfig">
+            <summary>
+            Class WebApiConfig.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:IoT.Web.Areas.Admin.AdminAreaRegistration">
+            <summary>
+            Class AdminAreaRegistration.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.Admin.AdminAreaRegistration.AreaName">
+            <summary>
+            Gets the name of the area.
+            </summary>
+            <value>The name of the area.</value>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.AdminAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            Registers the area.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:IoT.Web.Areas.Admin.Controllers.HomeController">
+            <summary>
+            Class HomeController.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.#ctor(Iot.Data.EF.IotUow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Base.BaseDataController" /> class.
+            </summary>
+            <param name="uow">The uow.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.Index">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.Devices(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Deviceses this instance.
+            </summary>
+            <param name="page">current page</param>
+            <param name="Query">The query.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.Report(System.Int32)">
+            <summary>
+            Reports the specified device identifier.
+            </summary>
+            <param name="deviceId">The device identifier.</param>
+            <returns>Task&lt;ActionResult&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.DeviceEdit(System.Int32)">
+            <summary>
+            Devices the add.
+            </summary>
+            <param name="deviceId">The device identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.DeviceEdit(Iot.Models.Device)">
+            <summary>
+            Devices the edit.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>Task&lt;ActionResult&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.DeviceDelete(System.Int32)">
+            <summary>
+            Devices the add.
+            </summary>
+            <param name="deviceId">The device identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.DeviceDelete(Iot.Models.Device)">
+            <summary>
+            Devices the delete.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>Task&lt;RedirectToRouteResult&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.DeviceAdd">
+            <summary>
+            Devices the add.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.Admin.Controllers.HomeController.DeviceAdd(Iot.Models.Device)">
+            <summary>
+            Devices the add.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>Task&lt;RedirectToRouteResult&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider" /> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Areas.HelpPage.Controllers.HelpController.ErrorViewName">
+            <summary>
+            The error view name
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.Controllers.HelpController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Areas.HelpPage.Controllers.HelpController"/> class.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.Controllers.HelpController.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Areas.HelpPage.Controllers.HelpController"/> class.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Controllers.HelpController.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>The configuration.</value>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.Controllers.HelpController.Index">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.Controllers.HelpController.Api(System.String)">
+            <summary>
+            APIs the specified API identifier.
+            </summary>
+            <param name="apiId">The API identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.Controllers.HelpController.ResourceModel(System.String)">
+            <summary>
+            Resources the model.
+            </summary>
+            <param name="modelName">Name of the model.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.HelpPageAreaRegistration">
+            <summary>
+            Class HelpPageAreaRegistration.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageAreaRegistration.AreaName">
+            <summary>
+            Gets the name of the area.
+            </summary>
+            <value>The name of the area.</value>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            Registers the area.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,IoT.Web.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:IoT.Web.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:IoT.Web.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,IoT.Web.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,IoT.Web.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(IoT.Web.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:IoT.Web.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},IoT.Web.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:IoT.Web.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:IoT.Web.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleKey.#ctor(IoT.Web.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:IoT.Web.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,IoT.Web.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:IoT.Web.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:IoT.Web.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider" /> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Areas.HelpPage.XmlDocumentationProvider._documentNavigator">
+            <summary>
+            The _document navigator
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.TypeExpression">
+            <summary>
+            The type expression
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.MethodExpression">
+            <summary>
+            The method expression
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.PropertyExpression">
+            <summary>
+            The property expression
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.FieldExpression">
+            <summary>
+            The field expression
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.ParameterExpression">
+            <summary>
+            The parameter expression
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Areas.HelpPage.XmlDocumentationProvider" /> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+            <exception cref="T:System.ArgumentNullException">documentPath</exception>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpParameterDescriptor)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="parameterDescriptor">The parameter descriptor.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetResponseDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the response documentation.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetMethodNode(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the method node.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>XPathNavigator.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetMemberName(System.Reflection.MethodInfo)">
+            <summary>
+            Gets the name of the member.
+            </summary>
+            <param name="method">The method.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetTagValue(System.Xml.XPath.XPathNavigator,System.String)">
+            <summary>
+            Gets the tag value.
+            </summary>
+            <param name="parentNode">The parent node.</param>
+            <param name="tagName">Name of the tag.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetTypeNode(System.Type)">
+            <summary>
+            Gets the type node.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>XPathNavigator.</returns>
+        </member>
+        <member name="M:IoT.Web.Areas.HelpPage.XmlDocumentationProvider.GetTypeName(System.Type)">
+            <summary>
+            Gets the name of the type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:IoT.Web.Base.BaseApiController">
+            <summary>
+            Class BaseApiController - base api controller for working with database
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Base.BaseApiController.uow">
+            <summary>
+            The uow
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Base.BaseApiController.#ctor(Iot.Data.EF.IotUow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Base.BaseDataController" /> class.
+            </summary>
+            <param name="uow">The uow.</param>
+        </member>
+        <member name="P:IoT.Web.Base.BaseApiController.Database">
+            <summary>
+            The database
+            </summary>
+            <value>The database.</value>
+        </member>
+        <member name="T:IoT.Web.Base.BaseDataController">
+            <summary>
+            Class BaseDataController, where the default implementation lives
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Base.BaseDataController.uow">
+            <summary>
+            The uow
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Base.BaseDataController.#ctor(Iot.Data.EF.IotUow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Base.BaseDataController"/> class.
+            </summary>
+            <param name="uow">The uow.</param>
+        </member>
+        <member name="P:IoT.Web.Base.BaseDataController.Database">
+            <summary>
+            The database
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Base.DefaultController">
+            <summary>
+            Class DefaultController.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Base.DefaultController.SetTitle(System.String)">
+            <summary>
+            Sets the title.
+            </summary>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:IoT.Web.Base.DefaultController.SetMessage(System.String)">
+            <summary>
+            Sets the message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:IoT.Web.Controllers.AccountController">
+            <summary>
+            Class AccountController.
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Controllers.AccountController.SignOut">
+            <summary>
+            Signs the out.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:IoT.Web.Controllers.DeviceApiController">
+            <summary>
+            Class DeviceApiController, where you can get data about devices
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.#ctor(Iot.Data.EF.IotUow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Base.BaseDataController" /> class.
+            </summary>
+            <param name="uow">The uow.</param>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.AddDevice(Iot.Models.Device)">
+            <summary>
+            Adds the device.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>Task&lt;HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.AddItemToDevice(System.String,Iot.Models.Item)">
+            <summary>
+            Adds the item to device.
+            </summary>
+            <param name="serialNumber">The serial number.</param>
+            <param name="item">The item.</param>
+            <returns>Task&lt;HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.GetAllDevicesAsnyc">
+            <summary>
+            Gets all devices.
+            </summary>
+            <returns>Task&lt;List&lt;Device&gt;&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.GetAllDevicesWithoutItemsAsync">
+            <summary>
+            get all devices without items as an asynchronous operation.
+            </summary>
+            <returns>Task&lt;List&lt;Device&gt;&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.GetDevicebyIdAsnyc(System.Int32)">
+            <summary>
+            Gets the device asnyc.
+            </summary>
+            <param name="deviceId">The device identifier.</param>
+            <returns>Task&lt;HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.GetItemsWithTempForDeviceId(System.Int32)">
+            <summary>
+            Gets the items for device identifier.
+            </summary>
+            <param name="deviceId">The device identifier.</param>
+            <returns>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.GetItemsWithHumidityForDeviceId(System.Int32)">
+            <summary>
+            Gets the items with humidity for device identifier.
+            </summary>
+            <param name="deviceId">The device identifier.</param>
+            <returns>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.SearchDevices(System.String)">
+            <summary>
+            Gets the device asnyc.
+            </summary>
+            <param name="searchTerm">The search term.</param>
+            <returns>Task&lt;HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DeviceApiController.GetDeviceBySNAsnyc(System.String)">
+            <summary>
+            Gets the device asnyc.
+            </summary>
+            <param name="sn">The sn.</param>
+            <returns>Task&lt;HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="T:IoT.Web.Controllers.DocsController">
+            <summary>
+            Class DocsController - logic for documentation and workshop start
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Controllers.DocsController.Index">
+            <summary>
+            shows the homepage of the docs and starting point of workshop
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DocsController.WebPart">
+            <summary>
+            shows the web part of the workshop
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DocsController.Desktop">
+            <summary>
+            Desktops this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DocsController.Iot">
+            <summary>
+            Iots this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:IoT.Web.Controllers.DownloadController">
+            <summary>
+            Class DownloadController for showing and working with download options
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Controllers.DownloadController.factory">
+            <summary>
+            The factory
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Controllers.DownloadController.cacheService">
+            <summary>
+            The cache service
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Controllers.DownloadController.#ctor(Iot.Data.EF.IotUow,Iot.Engine.IConfigurationFactory,Iot.Interfaces.ICacheService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Base.BaseDataController" /> class.
+            </summary>
+            <param name="uow">The uow.</param>
+            <param name="factory">factory with all providers</param>
+            <param name="cacheService">cache service</param>
+        </member>
+        <member name="M:IoT.Web.Controllers.DownloadController.Index(System.Nullable{System.Int32})">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <param name="page">The page.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DownloadController.Filter">
+            <summary>
+            Filters this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+            <remarks>uses PRG system - post redirect get - for users ot be able to refresh the page</remarks>
+        </member>
+        <member name="M:IoT.Web.Controllers.DownloadController.Detail(System.String)">
+            <summary>
+            returns details about download
+            </summary>
+            <param name="friendlyName">friendly name of the download</param>
+            <returns>view</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.DownloadController.DownloadById(System.Int32)">
+            <summary>
+            Downloads the by identifier.
+            </summary>
+            <param name="downloadId">The download identifier.</param>
+            <returns>Task&lt;ActionResult&gt;.</returns>
+        </member>
+        <member name="T:IoT.Web.Controllers.HomeController">
+            <summary>
+            Class HomeController.
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Controllers.HomeController.configurationFactory">
+            <summary>
+            The configuration factory
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Controllers.HomeController.#ctor(Iot.Data.EF.IotUow,Iot.Engine.IConfigurationFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Controllers.HomeController" /> class.
+            </summary>
+            <param name="uow">The uow.</param>
+            <param name="configurationFactory">The configuration factory.</param>
+        </member>
+        <member name="M:IoT.Web.Controllers.HomeController.Index">
+            <summary>
+            shows the homepage
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.HomeController.About">
+            <summary>
+            Abouts the whole project.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.HomeController.About(IoT.Web.ViewModels.AboutViewModel)">
+            <summary>
+            Abouts the specified model.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>Task&lt;RedirectToRouteResult&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.HomeController.DevicesRss">
+            <summary>
+            get devices rss
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.HomeController.ItemsRss">
+            <summary>
+            get items rss
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:IoT.Web.Controllers.ItemApiController">
+            <summary>
+            Class ItemApiController for getting data to the desktop via json
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Controllers.ItemApiController.#ctor(Iot.Data.EF.IotUow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Base.BaseDataController" /> class.
+            </summary>
+            <param name="uow">The uow.</param>
+        </member>
+        <member name="M:IoT.Web.Controllers.ItemApiController.GetItemTypes">
+            <summary>
+            Gets the item types.
+            </summary>
+            <returns>Dictionary&lt;System.Int32, System.String&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.ItemApiController.GetAllItemsAsync">
+            <summary>
+            get all items as an asynchronous operation.
+            </summary>
+            <returns>Task&lt;List&lt;Item&gt;&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.ItemApiController.GettemsByIdAsync(System.Int32)">
+            <summary>
+            gettems by identifier as an asynchronous operation.
+            </summary>
+            <param name="itemId">The item identifier.</param>
+            <returns>Task&lt;HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.ItemApiController.SearchItemsByItemTypes(System.String)">
+            <summary>
+            Searches the items by item types.
+            </summary>
+            <param name="itemTypeValue">The item type value.</param>
+            <returns>List&lt;Item&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.ItemApiController.SearchItemsByDate(System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            Searches the items by date.
+            </summary>
+            <param name="from">From date.</param>
+            <param name="to">To date.</param>
+            <returns>HttpResponseMessage.</returns>
+            <remarks>if to is empty or null, then only from is applied</remarks>
+        </member>
+        <member name="T:IoT.Web.Controllers.WebPartController">
+            <summary>
+            Class WebPartController for working with web part of the workshop
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Controllers.WebPartController.configurationFactory">
+            <summary>
+            The configuration factory
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Controllers.WebPartController.cacheService">
+            <summary>
+            The cache service
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.#ctor(Iot.Data.EF.IotUow,Iot.Engine.IConfigurationFactory,Iot.Interfaces.ICacheService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Base.BaseDataController" /> class.
+            </summary>
+            <param name="uow">The uow.</param>
+            <param name="configurationFactory">configuration factory</param>
+            <param name="cacheService">cache service</param>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.DownloadInfo">
+            <summary>
+            Downloads the information.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.Chart">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.Filtering(IoT.Web.ViewModels.SearchViewModel)">
+            <summary>
+            Filter items
+            </summary>
+            <param name="model">The model.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.GetDevicesBasedOnQuery(System.String)">
+            <summary>
+            Gets the devices based on query.
+            </summary>
+            <param name="query">The query.</param>
+            <returns>Task&lt;List&lt;Device&gt;&gt; or all devices instead</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.ExportToExcell">
+            <summary>
+            Exports to excell.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.PushNotification">
+            <summary>
+            Pushes the notification.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.DoPushNotification(System.Int32)">
+            <summary>
+            Does the push notification.
+            </summary>
+            <param name="deviceId">The device identifier.</param>
+            <returns>Task&lt;ActionResult&gt;.</returns>
+        </member>
+        <member name="M:IoT.Web.Controllers.WebPartController.DoPushNotification(Iot.Models.Device)">
+            <summary>
+            Does the push notification.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:IoT.Web.Global">
+            <summary>
+            Class Global - entry point for application
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Global.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Start event of the Application control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:IoT.Web.Helpers.ConstantHelper">
+            <summary>
+            Class ConstantHelper for helper messages
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.PageMessageKey">
+            <summary>
+            The page message key
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.PushNotificationUniqueTag">
+            <summary>
+            The push notification unique tag
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.ClientId">
+            <summary>
+            The client identifier
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.PushNotificationString">
+            <summary>
+            The push notification string
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.PushNotificationHubName">
+            <summary>
+            The push notification hub name
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.AadInstance">
+            <summary>
+            The aad instance
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.TenantId">
+            <summary>
+            The tenant identifier
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.PostLogoutRedirectUri">
+            <summary>
+            The post logout redirect URI
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.ConstantHelper.Authority">
+            <summary>
+            The authority
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Helpers.HtmlImageExtensions">
+            <summary>
+            Class HtmlImageExtensions.
+            </summary>
+            <remarks>
+                based on http://www.asp.net/mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs
+            </remarks>
+        </member>
+        <member name="M:IoT.Web.Helpers.HtmlImageExtensions.Image(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String)">
+            <summary>
+            Images the specified helper.
+            </summary>
+            <param name="helper">The helper.</param>
+            <param name="id">The identifier.</param>
+            <param name="url">The URL.</param>
+            <param name="alternateText">The alternate text.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:IoT.Web.Helpers.HtmlImageExtensions.Image(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Images the specified helper.
+            </summary>
+            <param name="helper">The helper.</param>
+            <param name="id">The identifier.</param>
+            <param name="url">The URL.</param>
+            <param name="alternateText">The alternate text.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:IoT.Web.Helpers.ListHelpers">
+            <summary>
+            Class ListHelpers - it is helper for working with lists
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Helpers.SettingsHelper">
+            <summary>
+            Class SettingsHelper for helping with configuration file.
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Helpers.SettingsHelper.DefaultPageSize">
+            <summary>
+            The default page size
+            </summary>
+        </member>
+        <member name="T:IoT.Web.Helpers.SystemHelpers">
+            <summary>
+            helper for web related stuff
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Helpers.SystemHelpers.GetApplicationHTTPPath">
+            <summary>
+            get full HTTP path to the app
+            </summary>
+            <returns>pat to the app or null otherwise</returns>
+            <remarks>http://appname/call</remarks>
+        </member>
+        <member name="M:IoT.Web.Helpers.SystemHelpers.GetUsersIpAddress">
+            <summary>
+            Get the current users IP address
+            </summary>
+            <returns>user ip address or null otherwise</returns>
+        </member>
+        <member name="M:IoT.Web.Helpers.SystemHelpers.IsValidEmail(System.String)">
+            <summary>
+            Determines whether is valid email of the specified input email.
+            </summary>
+            <param name="inputEmail">The input email.</param>
+            <returns><c>true</c> if is valid email the specified input email; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:IoT.Web.Infrastrcture.BinaryContentResult">
+            <summary>
+            Class BinaryContentResult, which return binary content as a result
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Infrastrcture.BinaryContentResult.ContentType">
+            <summary>
+            The content type
+            </summary>
+        </member>
+        <member name="F:IoT.Web.Infrastrcture.BinaryContentResult.ContentBytes">
+            <summary>
+            The content bytes
+            </summary>
+        </member>
+        <member name="M:IoT.Web.Infrastrcture.BinaryContentResult.#ctor(System.Byte[],System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IoT.Web.Infrastrcture.BinaryContentResult"/> class.
+            </summary>
+            <param name="contentBytes">The content bytes.</param>
+            <param name="contentType">Type of the content.</param>
+        </member>
+        <member name="M:IoT.Web.Infrastrcture.BinaryContentResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Executes the result.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:IoT.Web.Infrastrcture.RssActionResult">
+            <summary>
+            Class RssActionResult, which represents an option to provide rss output
+            </summary>
+        </member>
+        <member name="P:IoT.Web.Infrastrcture.RssActionResult.Feed">
+            <summary>
+            Gets or sets the feed.
+            </summary>
+            <value>The feed.</value>
+        </member>
+        <member name="M:IoT.Web.Infrastrcture.RssActionResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Enables processing of the result of an action method by a custom type that inherits from the <see cref="T:System.Web.Mvc.ActionResult" /> class.
+            </summary>
+            <param name="context">The context in which the result is executed. The context information includes the controller, HTTP content, request context, and route data.</param>
+        </member>
+        <member name="T:IoT.Web.ViewModels.AboutViewModel">
+            <summary>
+            Class AboutViewModel for sending data to the choosen email
+            </summary>
+        </member>
+        <member name="P:IoT.Web.ViewModels.AboutViewModel.FullName">
+            <summary>
+            Gets or sets the full name.
+            </summary>
+            <value>The full name.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.AboutViewModel.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+            <value>The email.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.AboutViewModel.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="T:IoT.Web.ViewModels.AdminDevicesViewModel">
+            <summary>
+            Class AdminDevicesViewModel.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.ViewModels.AdminDevicesViewModel.Query">
+            <summary>
+            Gets or sets the query.
+            </summary>
+            <value>The query.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.AdminDevicesViewModel.Devices">
+            <summary>
+            Gets or sets the devices.
+            </summary>
+            <value>The devices.</value>
+        </member>
+        <member name="T:IoT.Web.ViewModels.CategoryViewModel">
+            <summary>
+            Class CategoryViewModel.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.ViewModels.CategoryViewModel.Category">
+            <summary>
+            Gets or sets the category.
+            </summary>
+            <value>The category.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.CategoryViewModel.Selected">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:IoT.Web.ViewModels.CategoryViewModel"/> is selected.
+            </summary>
+            <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:IoT.Web.ViewModels.ExportData">
+            <summary>
+            Class ExportData.
+            </summary>
+        </member>
+        <member name="P:IoT.Web.ViewModels.ExportData.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.ExportData.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.ExportData.ItemCount">
+            <summary>
+            Gets or sets the item count.
+            </summary>
+            <value>The item count.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.ExportData.SerialNumber">
+            <summary>
+            Gets or sets the serial number.
+            </summary>
+            <value>The serial number.</value>
+        </member>
+        <member name="T:IoT.Web.ViewModels.ReportDeviceViewModel">
+            <summary>
+            Class ReportDeviceViewModel for representing requested data
+            </summary>
+        </member>
+        <member name="P:IoT.Web.ViewModels.ReportDeviceViewModel.Device">
+            <summary>
+            Gets or sets the device.
+            </summary>
+            <value>The device.</value>
+        </member>
+        <member name="T:IoT.Web.ViewModels.SearchViewModel">
+            <summary>
+            Class SearchViewModel for providing search results
+            </summary>
+        </member>
+        <member name="P:IoT.Web.ViewModels.SearchViewModel.PageNumber">
+            <summary>
+            Gets or sets the page number.
+            </summary>
+            <value>The page number.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.SearchViewModel.Query">
+            <summary>
+            Gets or sets the query.
+            </summary>
+            <value>The query.</value>
+        </member>
+        <member name="P:IoT.Web.ViewModels.SearchViewModel.Devices">
+            <summary>
+            Gets or sets the devices.
+            </summary>
+            <value>The devices.</value>
+        </member>
+    </members>
+</doc>

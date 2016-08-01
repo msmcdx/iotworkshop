@@ -1,0 +1,26 @@
+@model HelpPageApiModel
+
+@{
+    var description = Model.ApiDescription;
+    var title = description.HttpMethod.Method + " " + description.RelativePath;
+    ViewBag.Title = title;
+}
+
+@section breadcrumb{
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Help")">Web API</a></li>
+        <li class="active">@title</li>
+    </ol>
+}
+
+@section styles{
+    <link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+}
+<div class="col-md-12">
+    <div class="page-header">
+        <h2>
+            Web api documentation for @description.RelativePath
+        </h2>
+    </div>
+    @Html.DisplayForModel()
+</div>

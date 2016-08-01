@@ -1,0 +1,25 @@
+﻿@model Device
+@{
+    var name = Model.Name;
+    ViewBag.Title = "IotWorkshop >> Delete";
+}
+<div class="col-md-12">
+    <div class="page-header">
+        <h1>
+            Delete <b>@name</b>?
+            &nbsp;
+            <small>Are you sure you want to delete the device?</small>
+        </h1>
+    </div>
+    <p class="text-danger margin-bottom-10">
+        <span class="text-uppercase">Warning</span>: All data, connected with device @name, will be lost!
+    </p>
+    @using (Html.BeginForm("DeviceDelete", "Admin", FormMethod.Post))
+    {
+        @Html.HiddenFor(d => d.DeviceId)
+        @Html.HiddenFor(d => d.Name)
+        <button type="submit" class="btn btn-warning btn-lg">
+            Delete @name
+            </button>
+    }
+</div>
